@@ -1,6 +1,5 @@
 import knex from 'knex'
 import { fileURLToPath, URL } from 'node:url'
-// import rawData from '../../tmp/douban.json' assert { type: 'json' }
 
 const rv = (p) => fileURLToPath(new URL(p, import.meta.url))
 
@@ -37,17 +36,6 @@ async function init() {
       table.integer('star_count')
     })
   })
-
-  for (const d of rawData) {
-    const { rating, ...film } = d
-    if (!film || !rating) continue
-    rating.film_id = film.id
-    rating.average = rating.value
-    delete rating.value
-
-    await db('films').insert(film).onConflict('id').ignore()
-    await db('film_ratings').insert(rating).onConflict('film_id').ignore()
-  }
 }
 
 init()
