@@ -9,22 +9,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@10.4.1",
   "dependencies": {
     "@koa/cors": "^5.0.0",
-    "better-sqlite3": "^11.1.2",
-    "dayjs": "^1.11.12",
+    "better-sqlite3": "^11.8.1",
+    "dayjs": "^1.11.13",
     "knex": "^3.1.0",
-    "koa": "^2.15.3",
+    "koa": "^2.15.4",
     "koa-bodyparser": "^4.4.1",
     "koa-mount": "^4.0.0",
-    "koa-router": "^12.0.1",
+    "koa-router": "^13.0.1",
     "koa-static": "^5.0.0",
-    "nanoid": "^5.0.7",
-    "nodemon": "^3.1.4",
-    "openai": "^4.53.0"
+    "nanoid": "^5.1.0",
+    "nodemon": "^3.1.9",
+    "openai": "^4.85.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.12"
+    "@types/node": "^22.13.4"
   }
 }
